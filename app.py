@@ -452,7 +452,7 @@ if "suggestion_query" in st.session_state:
     del st.session_state.suggestion_query
 
 user_input = st.chat_input(
-    "Ask something about your feelings or mental health" if mode != "Mode 2: Chatbot With Document"
+    "Ask something about your bells university" if mode != "Mode 2: Chatbot With Document"
     else f"Ask something about mental health (Active Document: {st.session_state.doc_uploaded['name'] if st.session_state.doc_uploaded else 'No document attached.'})"
 )
 
