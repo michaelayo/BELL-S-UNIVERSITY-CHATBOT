@@ -436,8 +436,8 @@ if "suggestion_query" in st.session_state:
     if len(chat_history) > max_chars:
         chat_history = chat_history[-max_chars:]
     final_input = f"CONTEXT: {context_used}\nCHAT HISTORY: {chat_history}\nQUESTION: {suggestion}"
-    if len(final_input) > 5500:
-        final_input = final_input[-5500:]
+    if len(final_input) > 3500:
+        final_input = final_input[-3500:]
     result = safe_invoke(qa_chain, {"question": final_input})
     with st.chat_message("assistant"):
         with st.status("Thinking 💡...", expanded=True):
