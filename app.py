@@ -289,6 +289,7 @@ ANSWER:
 # Initialize LLM (streaming + smaller model)
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="llama3-8b-8192", streaming=True)
 
+
 # Load global FAISS for Mode 1
 try:
     global_db = FAISS.load_local("my_vector_store", embeddings, allow_dangerous_deserialization=True)
