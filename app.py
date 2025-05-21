@@ -176,7 +176,7 @@ if not st.session_state.logged_in:
                         st.session_state.current_chat_id = cid
                     else:
                         st.session_state.current_chat_id = list(st.session_state.chat_sessions.keys())[0]
-                    st.experimental_rerun()
+                    # st.experimental_rerun()
                 else:
                     st.error("Invalid username or password.")
     else:
@@ -206,7 +206,7 @@ with st.sidebar:
             if k != "logged_in":
                 del st.session_state[k]
         st.session_state.logged_in = False
-        st.experimental_rerun()
+        # st.experimental_rerun()
 
     st.subheader("Chat Sessions")
     if "chat_sessions" not in st.session_state:
